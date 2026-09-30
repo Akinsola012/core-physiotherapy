@@ -20,12 +20,13 @@ export default function HomePage() {
             <span>{practice.name}</span>
           </Link>
 
-          <div className="header-contact">
-            <span className="header-contact-item">📍 {practice.serviceArea}</span>
-            <a className="header-contact-item" href={practice.whatsappHref}>
-              💬 WhatsApp
-            </a>
-          </div>
+          <nav className="header-nav">
+            <Link href="/how-it-works">How It Works</Link>
+            <Link href="/what-we-treat">What We Treat</Link>
+            <Link href="/packages">Packages</Link>
+            <Link href="/about">About</Link>
+            <Link href="/faq">FAQ</Link>
+          </nav>
 
           <a className="button button-small" href={practice.whatsappHref}>
             Book an Assessment
@@ -49,7 +50,7 @@ export default function HomePage() {
               <a className="button button-gold" href={practice.whatsappHref}>
                 Book a Mobility Assessment
               </a>
-              <Link className="button button-outline" href="#how-it-works">
+              <Link className="button button-outline" href="/how-it-works">
                 How It Works
               </Link>
             </div>
@@ -163,8 +164,8 @@ export default function HomePage() {
             <p className="eyebrow">Packages</p>
             <h2>Simple pricing. International cards welcome.</h2>
             <p>
-              Pay securely in USD, GBP, or CAD. Prices shown in USD with NGN
-              equivalent.
+              Pay securely in NGN, USD, GBP, or CAD via Selar. Prices shown in
+              NGN with USD equivalent.
             </p>
           </div>
 
@@ -180,8 +181,8 @@ export default function HomePage() {
 
                 <h3>{pkg.name}</h3>
                 <p className="pricing-sessions">{pkg.sessions}</p>
-                <p className="pricing-amount-usd">{pkg.priceUSD}</p>
-                <p className="pricing-amount-ngn">{pkg.priceNGN}</p>
+                <p className="pricing-amount-usd">{pkg.priceNGN}</p>
+                <p className="pricing-amount-ngn">{pkg.priceUSD}</p>
                 <p className="pricing-desc">{pkg.description}</p>
 
                 <ul className="pricing-includes">
@@ -193,7 +194,12 @@ export default function HomePage() {
                   ))}
                 </ul>
 
-                <a className="button" href={practice.whatsappHref}>
+                <a
+                  className="button"
+                  href={pkg.selarLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   Book This Package
                 </a>
               </div>
@@ -201,8 +207,8 @@ export default function HomePage() {
           </div>
 
           <p className="pricing-note">
-            Final pricing depends on location and condition severity. Payment
-            via international card or bank transfer.
+            Secure checkout via Selar. International cards accepted. No hidden
+            fees.
           </p>
         </div>
       </section>
@@ -256,10 +262,11 @@ export default function HomePage() {
 
           <div>
             <h3>Quick Links</h3>
-            <a href="#how-it-works">How It Works</a>
-            <a href="/#services">What We Treat</a>
-            <a href="/#packages">Packages</a>
-            <a href="/#faq">FAQ</a>
+            <Link href="/how-it-works">How It Works</Link>
+            <Link href="/what-we-treat">What We Treat</Link>
+            <Link href="/packages">Packages</Link>
+            <Link href="/about">About</Link>
+            <Link href="/faq">FAQ</Link>
           </div>
 
           <div>

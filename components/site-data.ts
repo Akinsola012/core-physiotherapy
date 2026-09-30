@@ -113,25 +113,26 @@ export const packages = [
   {
     slug: "starter",
     name: "Starter Assessment",
-    priceUSD: "$149",
-    priceNGN: "₦230,000",
-    sessions: "1 Session",
+    priceNGN: "₦75,000",
+    priceUSD: "~$90 USD",
+    sessions: "3 Sessions",
     description:
-      "The essential starting point. A full clinical assessment with a written recovery plan.",
+      "The essential starting point. A full clinical assessment plus treatment sessions.",
     includes: [
       "Full clinical home assessment",
       "Written treatment plan (PDF)",
       "Mobility & safety check",
-      "Video call with treating physio",
-      "First session included"
+      "2 follow-up treatment sessions",
+      "Direct WhatsApp line to your physio"
     ],
+    selarLink: "https://selar.co/YOUR-STARTER-LINK",
     featured: false
   },
   {
     slug: "comprehensive",
     name: "Comprehensive Care",
-    priceUSD: "$449",
-    priceNGN: "₦690,000",
+    priceNGN: "₦120,000",
+    priceUSD: "~$145 USD",
     sessions: "5 Sessions",
     description:
       "Our most popular package. Ideal for post-surgery, falls, and arthritis recovery.",
@@ -142,13 +143,14 @@ export const packages = [
       "Direct WhatsApp line to your physio",
       "Written discharge summary"
     ],
+    selarLink: "https://selar.co/YOUR-COMPREHENSIVE-LINK",
     featured: true
   },
   {
     slug: "intensive",
     name: "Intensive Recovery",
-    priceUSD: "$749",
-    priceNGN: "₦1,150,000",
+    priceNGN: "₦210,000",
+    priceUSD: "~$250 USD",
     sessions: "9 Sessions",
     description:
       "For stroke recovery, complex cases, or intensive post-hospital rehabilitation.",
@@ -160,6 +162,7 @@ export const packages = [
       "Direct line + escalation protocol",
       "Written discharge summary"
     ],
+    selarLink: "https://selar.co/YOUR-INTENSIVE-LINK",
     featured: false
   }
 ];
@@ -171,7 +174,7 @@ export const faqs = [
   },
   {
     q: "Can I pay with my UK / US / Canadian debit card?",
-    a: "Yes. Our checkout accepts international cards in USD, GBP, and CAD. You'll be billed safely in your local currency."
+    a: "Yes. Our checkout accepts international cards in USD, GBP, and CAD. You'll be billed safely in your local currency via Selar."
   },
   {
     q: "How do I know my parents are being treated respectfully?",
